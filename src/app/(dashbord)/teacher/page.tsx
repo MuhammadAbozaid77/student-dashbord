@@ -1,3 +1,7 @@
 export default function TeacherPage() {
-  return <div>TeacherPage</div>;
+  return (
+    <div>
+      <div>TeacherPage</div>
+    </div>
+  );
 }
