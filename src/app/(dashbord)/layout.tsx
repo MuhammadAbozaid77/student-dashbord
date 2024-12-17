@@ -10,13 +10,13 @@ export default function DashbordLayout({
   return (
     <>
       <div className="h-screen flex">
-        <div className="w-[15%] md:w-[10%] lg:w-[15%] bg-slate-200 p-5">
+        <div className="w-[15%] md:w-[10%] lg:w-[15%] bg-white p-5 border-r">
           <Logo />
           <Menu />
         </div>
-        <div className="w-[85%]  md:w-[90%] lg:w-[85%] bg-gray-300 overflow-scroll">
+        <div className="w-[85%]  md:w-[90%] lg:w-[85%]  overflow-scroll bg-slate-100">
           <Navbar />
-          {children}
+          <div className="p-2">{children}</div>
         </div>
       </div>
     </>
