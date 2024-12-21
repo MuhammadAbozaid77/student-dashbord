@@ -1,7 +1,12 @@
+"use client";
+
+import AttendanceChart from "@/components/charts/AttendanceChart";
 import CountCharts from "@/components/charts/CountCharts";
+import FinanceChart from "@/components/charts/FinanceChart";
 import UserCard from "@/components/client/UserCard";
 import { RiMoreFill } from "react-icons/ri";
-// Sky - Cyan - Purble - Slate
+// Sky - Cyan - Purble (200)
+// Slate-500
 export default function AdminPage() {
   return (
     <>
@@ -16,7 +21,7 @@ export default function AdminPage() {
 
           {/* Start Students && Attendence Charts  ===================================================================  */}
           <div className="flex gap-4 flex-col lg:flex-row">
-            {/* =================  (Left) Students Chart  =================  */}
+            {/* =================  (Top Left) Students Chart  =================  */}
             <div className="w-full lg:w-1/3 border rounded-md shadow-md p-5 bg-white">
               {/* === Top === */}
               <div className="flex justify-between items-center">
@@ -31,21 +36,21 @@ export default function AdminPage() {
               <div>
                 <div className="flex justify-around items-center">
                   <div className="flex flex-col justify-center items-center">
-                    <div className="w-[40px] h-[40px] rounded-full bg-amber-200"></div>
+                    <div className="w-[30px] h-[30px] rounded-full bg-amberColor"></div>
                     <span className="text-[20px] font-semibold">700</span>
                     <span className="font-semibold text-[14px] text-gray-400">
                       Total : 100%
                     </span>
                   </div>
                   <div className="flex flex-col justify-center items-center">
-                    <div className="w-[40px] h-[40px] rounded-full bg-boysColor"></div>
+                    <div className="w-[30px] h-[30px] rounded-full bg-boysColor"></div>
                     <span className="text-[20px] font-semibold">500</span>
                     <span className="font-semibold text-[14px] text-gray-400">
                       Boys : 65$
                     </span>
                   </div>
                   <div className="flex flex-col justify-center items-center">
-                    <div className="w-[40px] h-[40px] rounded-full bg-girlsColor"></div>
+                    <div className="w-[30px] h-[30px] rounded-full bg-girlsColor"></div>
                     <span className="text-[20px] font-semibold">200</span>
                     <span className="font-semibold text-[14px] text-gray-400">
                       Girls : 35$
@@ -54,8 +59,30 @@ export default function AdminPage() {
                 </div>
               </div>
             </div>
-            {/* =================  (Right) Attendence Chart  =================  */}
-            <div className="w-full lg:w-2/3 border bg-white"></div>
+            {/* =================  (Top Right) Attendence Chart  =================  */}
+            <div className="w-full lg:w-2/3 border rounded-md shadow-md p-5 bg-white">
+              {/* === Top === */}
+              <div className="flex justify-between items-center">
+                <span className=" px-2 py-1 bg-slate-50  rounded-md text-[16px]">
+                  Attendance
+                </span>
+                <RiMoreFill />
+              </div>
+              <AttendanceChart />
+            </div>
+          </div>
+          {/* =================  (Bottom) Chart  =================  */}
+          <div className="flex gap-4 flex-col lg:flex-row">
+            <div className="w-full  border rounded-md shadow-md p-5 bg-white">
+              {/* === Top === */}
+              <div className="flex justify-between items-center">
+                <span className=" px-2 py-1 bg-slate-50  rounded-md text-[16px]">
+                  Finance
+                </span>
+                <RiMoreFill />
+              </div>
+              <FinanceChart />
+            </div>
           </div>
           {/* End Students Chart  ===================================================================  */}
         </div>
