@@ -26,6 +26,10 @@ const data = [
   },
 ];
 
+const fff = () => {
+  console.log("ffff");
+};
+
 export default function CountCharts() {
   return (
     <div className="w-full h-[300px]">
