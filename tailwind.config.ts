@@ -11,8 +11,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        boysColor: "#bae6fd",
-        girlsColor: "#ddd6fe",
+        boysColor: "#7dd3fc",
+        girlsColor: "#d8b4fe",
+        amberColor: "#fcd34d",
+        cyanColor: "#06b6d4",
       },
     },
   },
